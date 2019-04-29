@@ -71,6 +71,7 @@ class ArticleAdminController extends AbstractController
     }
 
     /**
+     * Is
      * @Route("/admin/article", name="admin_article_list")
      */
     public function list(ArticleRepository $repository)
