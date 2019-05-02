@@ -36,16 +36,7 @@ class ArticleFormType extends AbstractType
             ->add('publishedAt',null ,[
                 'widget' => 'single_text'
             ])
-            ->add('author',EntityType::class,[
-                'class' => User::class,
-                'choice_label' => function(User $user){
-                return sprintf('(%d)%s',$user->getId(),$user->getEmail());
-                },
-                'placeholder' => 'Choose an author',
-                'choices' =>$this->repository
-                ->findAllEmailAlphabetical(),
-                'invalid_message' => 'Symfony is too smart for you hacking!'
-            ])
+            ->add('author',UserSelectTextType::class)
         ;
     }
 
