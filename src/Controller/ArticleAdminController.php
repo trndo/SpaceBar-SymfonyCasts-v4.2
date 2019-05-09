@@ -72,6 +72,8 @@ class ArticleAdminController extends AbstractController
         ]);
     }
 
+
+
     /**
      * @Route("/admin/article", name="admin_article_list")
      */
